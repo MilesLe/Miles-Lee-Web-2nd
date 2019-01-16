@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Theme Simply Me</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body>
+
+<!-- Navbar -->
+<nav style="position:fixed; top:0; width:100%;" class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Hi</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#section1">WHO</a></li>
+        <li><a href="#section2">WHY</a></li>
+        <li><a href="#section3">WHERE</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="parallax1"></div>
+
+<!-- First Container -->
+<div id="section1" class="container-fluid bg-1 text-center">
+  <h3 class="margin">Who Am I?</h3>
+  <img src="https://static.boredpanda.com/blog/wp-content/uploads/2017/12/national-geographic-nature-photographer-of-the-year-2017-winners-thumb.jpg" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">
+  <h3>I'm a(n) _______</h3>
+</div>
+
+<div class="parallax1"></div>
+
+<!-- Second Container -->
+<div id="section2" class="container-fluid bg-2 text-center">
+  <h3 class="margin">So What?</h3>
+  <p>text text text text text text text text text
+     text text text text text text text text text
+     text text text text text text text text text
+     text text text text text text text text text
+  </p>
+  <a href="#" class="btn btn-default btn-lg">
+    <span class="glyphicon glyphicon-search"></span> Search
+  </a>
+</div>
+
+<div class="parallax2"></div>
+
+<!-- Third Container (Grid) -->
+<div id="section3" class="container-fluid bg-3 text-center">    
+  <h3 class="margin">Where?</h3><br>
+  <div class="row">
+    <div class="col-sm-4">
+      <p>text text text text text text text text text
+         text text text text text text text text text
+         text text text text text text text text text
+      </p>
+      <img src="https://static.boredpanda.com/blog/wp-content/uploads/2014/03/funny-bears-doing-human-things-coverimage.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-4"> 
+      <p>text text text text text text text text text
+         text text text text text text text text text
+         text text text text text text text text text</p>
+      <img src="https://static.boredpanda.com/blog/wp-content/uploads/2014/03/funny-bears-doing-human-things-coverimage.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-4"> 
+      <p>text text text text text text text text text
+         text text text text text text text text text
+         text text text text text text text text text</p>
+      <img src="https://static.boredpanda.com/blog/wp-content/uploads/2014/03/funny-bears-doing-human-things-coverimage.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+    </div>
+  </div>
+</div>
+
+<div class="parallax2"></div>
+
+<!-- Footer -->
+<footer class="container-fluid bg-4 text-center">
+  <p> Created and edited by Miles Lee</p>
+  <p style="font-size: 10px;">Initial source code from <a href="https://www.w3schools.com">www.w3schools.com</a></p> 
+</footer>
+
+<script>
+    $(document).ready(function(){
+      // Add scrollspy to <body>
+      $('body').scrollspy({target: ".navbar", offset: 50});   
+    
+      // Add smooth scrolling on all links inside the navbar
+      $("#myNavbar a").on('click', function(event) {
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+    
+          // Store hash
+          var hash = this.hash;
+    
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function(){
+       
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        }  // End if
+      });
+    });
+    </script>
+
+</body>
+</html>
